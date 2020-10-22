@@ -1,0 +1,5 @@
+父控件 
+display: flex;
+
+子空间
+flex:  1;

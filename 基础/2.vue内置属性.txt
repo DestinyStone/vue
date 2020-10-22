@@ -1,0 +1,35 @@
+1. el: 声明元素id
+	el:"#app"
+2. data: 声明数据
+	data:{
+			message: [1, 2, 3, 4, 5]
+		}
+3. method: 声明方法
+	methods: {
+			add: function() {
+				this.data++;
+			}
+		}
+		
+4. computed   和 data的区别， 会存在监听引用对象， 当引用对象发生改变时会动态变化
+	computed:{
+			"colorMerge": function() {
+				return this.isRed + "  " + this.isBule;
+			}
+		}
+
+5.filters
+	filters:{
+				showPrjce(price) {
+					return "$" + Number(price).toFixed(2);
+				}
+			}
+	使用 <td>{{item.price | showPrjce}}</td>
+
+6. watch
+	watch:{
+		current(newValue, oldValue) {
+			console.log(newValue, oldValue)
+		}
+	}
+	使用： 方法名为变量名，当变量出现变化时会触发

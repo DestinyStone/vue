@@ -1,0 +1,18 @@
+条件
+	mutations: {
+		incr() {
+			console.log("33");
+		}
+	}
+
+1. 导入 mapMutations
+import {mapMutations} from "vuex"
+
+2. 使用
+	method: {
+		...mapMutations['incr']
+		test() {
+			this.incr();  //直接调用  避免 this.$store.commit("incr写法")
+		}
+	}
+

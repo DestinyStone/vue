@@ -1,0 +1,12 @@
+  computed: {
+    ...mapState('api', {
+      state: state => state
+    })
+  },
+  methods: {
+    ...mapMutations('api', ['setCurrentPath']),
+    test() {
+      this.setCurrentPath("33")
+      console.log( this.state);
+    }
+  }

@@ -1,0 +1,5 @@
+访问父元素
+this.$parent
+
+访问根元素
+this.$root

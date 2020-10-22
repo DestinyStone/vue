@@ -1,0 +1,21 @@
+v-model的双向绑定
+<div id="app">
+	<input  v-model="message"/>
+	{{message}}
+</div>
+
+注意当修改了input的value值 ，message也会修改，
+当修改了message的值， input的value也会修改
+
+v-model 结合 radio使用
+v-model="sex"  如果 sex为女 那么 value="女" 会默认被选中
+
+v-model 结合 checkBox使用
+v-model="array"   如果checkBox被点击 会把value加入array中
+
+v-model 结合 select使用
+
+修饰符使用
+v-model.lazy:   用户失去焦点， 或者回车才动态绑定
+v-model.number:   只能输入数字  
+v-model.trim:   绑定时去除两边空格

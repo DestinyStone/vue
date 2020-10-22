@@ -1,0 +1,28 @@
+自定义事件解决
+
+1. 子空间发布事件
+methods:{
+	doclick() {
+		console.log("发送事件")
+		return this.$emit("sendparent", "te222222st");
+	}
+}
+	点击触发方法
+<template id="testTemplate">
+		<div @click="doclick">
+			testClick
+		</div>
+</template>	
+
+2. 父控件接收对象
+<div id="app">
+	<my-div @sendparent="doclick"></my-div>
+</div>
+methods:{
+	doclick(item) {
+		console.log(item)
+	}
+}
+
+3. 细节问题 
+@sendparent="doclick"  doclick 不能加()

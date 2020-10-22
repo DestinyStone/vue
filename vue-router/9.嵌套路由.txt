@@ -1,0 +1,25 @@
+在路由下建立子路由
+
+1. 建立子路由
+{
+	name: "title1",
+	path: "/title1",
+	component: title1,
+	children: [
+		{
+			path: "content1",       //注意这里不用加 /
+			component: content1
+		},
+		{
+			path: "content2",
+			component: content2
+		}
+	]
+}
+
+
+2. 使用映射
+	<router-link to="/title1/content1">显示内容1</router-link>
+	<router-link to="/title1/content2">显示内容2</router-link>
+
+	<router-view></router-view>

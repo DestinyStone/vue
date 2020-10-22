@@ -1,0 +1,18 @@
+1. 解决问题
+	存在多个访问链接时， 单一的全局参数无法满足
+
+2. 实例化代码
+const instance = axios.create({
+        baseURL: "http://localhost:8083",
+        timeout: 5000
+ })
+
+3. 使用
+instance({
+	url: "/test1",
+	params: {
+		id: 1
+	}
+}).then(e => {
+	console.log(e)
+})

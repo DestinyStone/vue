@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+	</head>
+	<script src="./vue.min.js" type="text/javascript" charset="utf-8"></script>
+	<style>
+		.colorRed {
+			color: red;
+		}
+		.colorBlue{
+			color: blue;
+		}
+	</style>
+	<body v-cloak>
+		<div id="app">
+			<ul>
+				<li v-for="(item, index) in message" :class="setClass(index)" @click="changeColor(index)">{{item}}</li>
+			</ul>
+			
+		</div>
+		
+		<script>
+			const app = new Vue({
+				el:"#app",
+				data:{
+					message: [111111, 22222222, 333333, 44444],
+					currentIndex: -1,
+					isRed: true,
+					isBule: false
+				},
+				methods:{
+					setClass: function(index) {
+						return {colorBlue: index!=this.currentIndex, colorRed: index == this.currentIndex}
+					},
+					changeColor: function(index) {
+						this.currentIndex = index;
+					}
+				}
+			})
+		</script>
+	</body>
+</html>

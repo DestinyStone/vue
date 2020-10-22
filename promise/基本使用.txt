@@ -1,0 +1,30 @@
+new Promise((resolve, reject) => {	
+	// 执行代码
+	
+	//成功调用
+    resolve("test")
+	
+	//失败调用
+    reject("word")
+}).then(res => {
+    console.log(res);   // 调用resolve跳转到这里
+}, error => {
+    console.log(error)  // 调用reject跳转到这里
+}).catch(exception => {
+    console.log(exception)  //回调
+})
+
+new Pormise((resolve, reject) => {
+	$.ajax({
+		url: "A",
+		success: function(data) {
+			resolve(data)
+		}
+	})
+	
+}).then(res => {
+	$.ajax({
+		url: "B",
+		data: res
+	})
+})

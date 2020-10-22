@@ -1,0 +1,28 @@
+0. 导入项目
+import axios from "axios"
+
+1. 基本使用
+axios({
+	url: "url",
+}).then(res => {
+	console.log(res)
+})
+
+2. 处理 get请求参数
+axios({
+	url: "url",
+	params: {
+		参数1： 值，
+		参数2： 值
+	}
+}).then(res => {
+	console.log(res)
+})
+
+3.执行post请求
+ axios({
+	url: "http://localhost:8083/test1",
+	methods: "post"
+}).then(e => {
+	console.log(e.data.user)
+})

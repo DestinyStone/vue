@@ -1,0 +1,15 @@
+1. 引入
+下载地址https://cdn.staticfile.org/vue/2.2.2/vue.min.js
+<script src="./vue.min.js" type="text/javascript" charset="utf-8"></script>
+
+2.使用
+<div id="app">{{message}}</div>  <!-- 只要是app内部的元素都可以调用 -->
+		
+<script>
+	const app = new Vue({
+		el:"#app",
+		data:{
+			message: "testVue"
+		}
+	})
+</script>

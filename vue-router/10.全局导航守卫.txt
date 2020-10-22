@@ -1,0 +1,28 @@
+1. 添加全局导航守卫 类似于 aop
+router.beforeEach(to, from, next) => {
+	next()   //执行下一步
+})
+
+to 代表跳转的路由对象
+如：
+ {
+	name: "title2",
+	path: "/title2",
+	component: title2
+}
+
+路由对象中增加源数据
+{
+	name: "title2",
+	path: "/title2",
+	component: title2,
+	meta: {
+		message: "zs"
+	}
+}
+
+使用beforeEach获取name
+vueRouter.beforeEach((to, from, next) => {
+   01 document.title = to.matched[0].meta.message
+    next();
+});

@@ -1,0 +1,28 @@
+解决问题： 多个js中相同变量的引用问题
+如 1.js    var flag = false;     2.js  var flag = true   3.js console.log(flag)
+那么 3.js会输出true，还是false？
+
+es模块化
+导出
+1.js 末尾
+export{
+	变量1，变量2
+}
+
+2.js 开头
+导入
+import (变量1，变量2) from "./1.js"
+
+
+其他
+默认导出
+exprot default 变量1   //只能有一个变量
+
+导入
+import 任意变量名 变量1
+
+全部导入
+import * as 变量 from "...js"
+
+引用的使用必须 以./开头即使是在同级文件夹
+如： import {flag} from "./01.js"

@@ -1,0 +1,32 @@
+1. 创建组件构造器对象
+const cpnC = Vue.extend({
+	template: `<div>component</div>`
+})
+
+2. 注册组件
+	a. 全局注册
+vue.component("标签名 如：mydiv", cpnC)   
+	b. 局部注册
+const app = new Vue({
+		el:"#app",
+		data:{
+			message: "test"
+		},
+		components:{
+			myDiv:cpnC
+		}
+	})
+	
+3. 组件使用-语法糖
+
+components:{
+	myDiv:{
+		template: `<div>component</div>`
+	}
+}
+
+一些细节问题：
+	1. html不识别大小写问题 组件标签尽量使用小写字母， 使用大写字母的话，用驼峰命名法作标签
+	2. 组件能使用的范围一定是被vue托管的标签内
+	3. 组件外部要存在根标签(规范)
+		

@@ -1,0 +1,12 @@
+1. 创建 vue.config.js 文件
+
+2. 编写以下代码
+module.exports = {
+	configureWebpack: {
+		resolve: {
+			alias: {
+				"别名": "路径"     // 一般src 用 @标识
+			}
+		}
+	}
+}

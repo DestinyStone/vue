@@ -1,0 +1,5 @@
+this.$router.push()
+this.$router.replace()
+
+参数：
+router-link  的 to 怎么写这里就怎么写

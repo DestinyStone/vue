@@ -1,0 +1,6 @@
+能响应：
+	push(), pop(), shift()  //删除第一个元素, unshift(“aa”)  //数组最前面添加元素, splice(), sort(), reverse()
+
+不能响应
+	this.testArray[0] = "aaa"
+	可以使用 .splice(0, 1, "aaa"替换

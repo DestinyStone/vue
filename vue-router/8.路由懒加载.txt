@@ -1,0 +1,5 @@
+直接写法
+component: HelloWorld
+
+懒加载写法
+component: () => import("../components/About")

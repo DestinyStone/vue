@@ -1,0 +1,15 @@
+axios.all([
+	axios(),
+	axios()
+].them(result=>{
+
+}))
+
+
+2个请求数据不同时
+axios.all([
+	axios(),
+	axios()
+].them(axios.spread(arg1, arg2) => {
+
+}))

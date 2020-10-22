@@ -1,0 +1,17 @@
+1. 申明template
+<template id="testTemplate">
+	<div>testTemplate</div>
+</template>
+
+2. template:"#testTemplate" 使用
+const app = new Vue({
+	el:"#app",
+	data:{
+		message: "test"
+	},
+	components:{
+		myDiv:{
+			template:"#testTemplate"  //关键代码
+		}
+	}
+})

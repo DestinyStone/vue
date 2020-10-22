@@ -1,0 +1,7 @@
+必须先安装 node
+
+安装 webpack
+npm install webpack@3.6.0 -g
+
+局部安装 webpack    //开发时会用到, 全部要安装
+npm install webpack@3.6.0 --save-dev

@@ -1,0 +1,26 @@
+Vue 不允许父控江直接修改子空间， 可以修改但会报错
+
+1. 需要将修改的值放入 props中
+props:{
+	message:{
+		type: String, //提供类型    不能用括号括起来
+		default: "test" 
+	}
+}
+
+2. 引用标签时 使用v-bind:props属性：父控件属性
+<my-div :message=message></my-div>
+
+3. 注意
+当默认类型为对象，数组时default必须为方法
+对象
+default() {
+	return {}
+}
+数组
+default() {
+	return []
+}
+
+提供的默认值
+String， Number， Boolean， Array， Object，Data， Function， Symbol

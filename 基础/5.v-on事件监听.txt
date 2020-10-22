@@ -1,0 +1,16 @@
+v-on:事件    可简写为 @事件
+传参 
+	$event    传递浏览器的event对象
+	没有加‘’  同一当成变量处理
+
+事件
+@cliek 单击事件
+@keyup 键盘松开事件
+
+
+事件修饰符
+@click.stop  : 阻止事件冒泡
+@click.prevent: 阻止默认事件，    如提交按钮的自动提交
+@click.once:  只允许点击一次
+
+@keyup.enter: 只监听回车

@@ -1,0 +1,11 @@
+访问方式1
+this.$clidren[0].子元素属性
+如 this.$children[0].message
+
+访问方式2 (常用)
+this.refs.refName.子元素属性
+如： this.$refs.testName.message
+
+<div id="app" @click="test">
+	<my-div ref="testName" @sendparent="doclick" :message="message"></my-div>
+</div>

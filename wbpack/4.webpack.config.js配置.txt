@@ -1,0 +1,18 @@
+0. 项目cmd下执行 npm init  
+	会生成package.json    (依赖node的文件)
+
+1. 新建webpack.config.js文件
+
+2. 输入
+const path = require("path")    //node模块
+
+module.exprots = {
+	entry: "./webpackTest/src/main.js",
+	output: {
+		path: "path.resolve(__dirname, 'dist')",
+		filename: "bundle.js"
+	}
+}
+
+3.直接执行webpack  即可生成 bundle.js
+

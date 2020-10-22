@@ -1,0 +1,4 @@
+使用
+
+@click.native
+.native - 监听组件根元素的原生事件。

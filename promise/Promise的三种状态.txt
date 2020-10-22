@@ -1,0 +1,3 @@
+pending: 初始状态，不是成功或失败状态。
+fulfilled: 意味着操作成功完成。
+rejected: 意味着操作失败。

@@ -1,0 +1,23 @@
+1. 新建一个普通项目， 项目下包括 dist(项目打包后会放在这里)， src(开发位置) 文件夹， index.html 页面
+
+2.src下创建 01.js, main.js
+-----------------------
+01.js
+export var flag = false;
+
+main.js
+import {flag} from "./01"
+console.log(flag)
+--------------------------------
+
+老旧方法使用
+index.html 增加
+<script src="./main.js" type="module"></script>
+<script src="./01.js" type="module"></script>
+
+使用 webpack
+1. 执行命令(会将main设计的依赖全部整合 形成新的js文件)
+webpack ./webpackTest/src/main.js ./webpackTest/dist/bundle.js
+
+2. index.html 添加
+<script src="./dist/bundle.js"></script>

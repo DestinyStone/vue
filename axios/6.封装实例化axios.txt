@@ -1,0 +1,24 @@
+1. 创建 network/request.js  文件
+
+2. 封装
+
+import axios from "axios"
+
+export function request(config) {
+    const instance = axios.create({
+        baseURL: "http://localhost:8083",
+        timeout: 5000
+    });
+
+    return instance(config)	
+}
+
+3.调用
+ request({
+	url: "/test1",
+	params: {
+		"id": 1
+	}
+},ref => {
+	console.log(ref)
+})

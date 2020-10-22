@@ -1,0 +1,7 @@
+location.hash="随意Name"
+会将 随意Name 的组件加载进来
+
+history.pushState({}, "", "随意Name")
+history.replaceState({}, "", "随意Name")  替换， 不可返回
+history.go(-1) 弹出几个
+history.back()  回退

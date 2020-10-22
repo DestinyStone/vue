@@ -1,0 +1,43 @@
+1. mustache 语法
+	{{data}}， {{data1}  {data2}}, {{data1 + data2}}, {{data1 * 2}}
+
+2. v-once:  data 改变时 数据不改变
+
+3. v-html="url"  将url中的数据进行解析
+
+4. v-text="text": 直接将text进行展示
+
+//TODO
+5. v-pre: {{}} 不解析
+
+//TODO
+6. v-cloak: js未完全加载时(会显示{{data}})使用其他覆盖（推荐全局设置）
+	<style>
+		[v-cloak] {
+			display: none;
+		}
+	</style>
+
+	<body v-cloak></body>
+	
+7. v-bind: 绑定属性
+	<a v-bind:href="url">点击</a>
+	简写  <a :href="url">点击</a>
+	
+	动态类绑定
+	<div :class="{color:true, fontSize: false}">test</div>  
+	color, fontSize是类，通过控制boolean来控制类， true，false 可定义isColor:true 来控制
+	:class="getClass()" : 也可以写方法 ，需要方法返回 "{color:true, fontSize: false}"
+	
+	动态style绑定
+	<div :style="{fontSize: 'red'}">testStyle</div>   // <div :style="{'font-size': '40px'}">testStyle</div>
+	注意后面red必须加 ‘’ 不然vue会当成变量解析， 使用 -  必须加 ‘’
+
+8. v-for：遍历数据，生成多个元素
+	遍历map数据  获取key，value
+	v-for:"(value, key) in item"
+	获取下标
+	v-for:"(value, key, index) in item"
+
+	:key="item"   换用链表插入数据， 防止性能低下
+9. v-show: 元素渲染 隐藏

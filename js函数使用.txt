@@ -1,0 +1,14 @@
+toFixed(2) 保留2为小数
+
+按钮变灰 disable = false
+
+数组过滤大于10的数
+let newArray = array.filter(function(n) {return n > 10;})
+
+每个数都乘以2
+let array =  array.map(function(n){return n * 2})
+
+reduct
+array.reduct(function(参数一， 参数2){
+	return 1
+}, 初始化值)

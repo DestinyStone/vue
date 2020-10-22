@@ -1,0 +1,37 @@
+  创建router对象
+import VueRouter from "vue-router"
+import Vue from "vue";
+import tabbar from "../components/tabbar"
+import HelloWorld from "../components/HelloWorld"
+
+Vue.use(VueRouter)
+
+const vueRouter = new VueRouter({
+    routes:[
+        {   //映射关系
+            name: "home",
+            path: "/home",
+            component: HelloWorld
+        }
+    ]
+})
+
+export default vueRouter
+
+2. vue中使用路由
+new Vue({
+    render: h => h(App),
+    router             // 这里这个名字必须是router
+}).$mount('#app')
+
+3. 使用路由  当点击首页时， 对应的路由组件会替换 <router-view></router-view>
+<router-link to=home>首页</router-link>
+<router-view></router-view>
+
+
+
+5. to="/test"  和 to="test"
+当只存在一级目录时两者一样
+当存在二级目录时  
+/test/1   每次点击时 都是 localhost:8080/test/1
+test/1   每次点击都会增加 test/1   如 第一次点击  localhost:8080/test/1, 第二次点击 localhost:8080/test/1/test/1

@@ -1,0 +1,11 @@
+作用： 每次进入新路由后，就路由地址的组件不会被销毁
+
+使用
+<keep-alive>
+	<router-view></router-view>
+</keep-alive>
+
+属性
+
+exclude="组件1name,组件2name"  排除组件, 可使用正则表达式
+include=""  同理 ， 不常用

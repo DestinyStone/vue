@@ -1,0 +1,12 @@
+1. data声明数据
+myDiv:{
+	template:"#testTemplate",
+	data: function() {
+		return {
+			test: "test123"
+		}
+	}
+}
+
+2. 注意点
+data是一个方法， 防止其他人调用该组件时，引用了自定义的变量

@@ -1,0 +1,16 @@
+flex
+父元素   display: flex;
+
+子元素
+flex： 1；   按比例分配
+
+flex-wrap: nowrap;   所有元素挤在一行
+flex-wrap: wrap;   按照宽度决定一行多少元素
+
+间隔均等风
+justify-conetnt: space-around;   左右相加等于中间
+justify-conetnt: space-evenly;   左右均等风 等于中间
+
+
+
+

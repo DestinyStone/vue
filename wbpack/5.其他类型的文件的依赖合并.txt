@@ -1,0 +1,24 @@
+1. css
+a. main.js总引入css
+	require("./css/test.css");
+
+b. 安装依赖兼容 
+	npm install --save-dev css-loader
+	npm install --save-dev style-loader
+
+3. webpack.config.js 增加
+module.exports = {
+    entry: "./src/main.js",
+    output: {
+        path: path.resolve(__dirname, "dist"),
+        filename: "bundle.js"
+    },
+    module:{
+        rules:[
+            {
+                test: /\.css$/,
+                use:['style-loader','css-loader']
+            }
+        ]
+    }
+}

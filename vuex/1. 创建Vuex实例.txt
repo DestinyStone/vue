@@ -1,0 +1,33 @@
+1. 安装vuex
+npm install vuex --save
+
+2. 配置 vuex
+Vue.use(Vuex);
+const basicVuex = new Vuex.Store({
+    state:{
+      current: 1000
+    },
+    metations: {
+
+    },
+    actions: {
+
+    },
+    getters: {
+    },
+    modules: {
+
+    }
+  }
+);
+export default basicVuex;
+
+import store from "./vuex/BasicVue"
+new Vue({
+  render: h => h(App),
+  store
+}).$mount('#app')
+
+3. 简单使用
+	获取current
+	this.$store.state.current

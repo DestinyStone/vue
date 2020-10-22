@@ -1,0 +1,17 @@
+修改为history模式，  路径好看点
+
+
+const vueRouter = new VueRouter({
+    routes:[
+        {
+            path: "",
+            redirect: "/home"
+        },
+        {
+            name: "home",
+            path: "/home",
+            component: HelloWorld
+        }
+    ],
+    mode: "history"  //少了#号
+})

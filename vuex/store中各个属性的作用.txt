@@ -1,0 +1,31 @@
+state:
+	保存变量的地方
+	
+mutations: 
+	操作变量的地方
+	如 mutations: {
+			incrby(state) {
+				
+			}
+		}
+	使用  this.$store.commit("incrby")
+	
+	携带参数
+	mutations: {
+		incrby(state, args) {
+			
+		}
+	}
+	使用  this.$store.commit("incrby", args);
+	
+	
+getters:
+	相当于 compunent计算属性
+	如 getters: {
+			incrby(state) {
+				return state.current * 2;
+			}
+		}
+	使用
+	this.$store.getters.incrby
+

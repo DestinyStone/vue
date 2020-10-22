@@ -1,0 +1,17 @@
+1. 请求成功拦截 / 请求失败拦截
+instance.interceptors.request.use(config => {
+	console.log(config)
+	return config;
+}, error => {
+	console.log(error);
+});
+
+
+
+2.响应成功拦截 / 响应失败拦截
+instance.interceptors.request.use(ref => {
+	console.log(ref)
+	return config
+}, error => {
+
+});

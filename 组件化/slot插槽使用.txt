@@ -1,0 +1,41 @@
+功能： 用户可自定义元素对<slot></slot> 进行替换
+基本使用
+<div>
+        <h1>{{testData}}</h1>
+        <button >点击</button>
+	<slot></slot>
+</div>
+
+用户使用元素标签替换
+<div id="app">
+	{{message}}
+	<temp>
+		<div>222</div>  //之定义slot
+	</temp>
+</div>
+
+具名插槽的使用
+<div>
+	<h1>{{testData}}</h1>
+	<button >点击</button>
+	<slot name="top"><div>222</div></slot>
+	<slot name="bootom"><div>3333</div></slot>
+</div>
+
+<temp>
+	<div slot="top">22222222</div>
+</temp>
+
+
+
+替换规则
+父组件没声明， 子组件没命名
+	父组件的一个元素将替换子组件的所有slot， 即一个产生多个
+父组件没声明， 子组件都命名
+	不进行替换
+父组件声明， 子组件不声明
+	不进行替换
+父组件声明， 子组件声明
+
+原理： 遍历每一个子组件slot中的name 去父组件中寻找对应的name经行替换， 空白名匹配空白名
+	
